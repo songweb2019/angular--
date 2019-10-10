@@ -1,0 +1,37 @@
+<ion-header padding>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-icon name="arrow-back" routerLink="/user-center"></ion-icon> -->
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-buttons>
+    <ion-title>用户登录</ion-title>
+    <!-- <ion-text slot="end">注册</ion-text> -->
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+   <!-- card 登录表单 -->
+   <ion-card>  
+     <ion-item>
+       <ion-label position="floating">账号：</ion-label>
+       <ion-input [(ngModel)]="uname"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label position="floating">密码：</ion-label>
+       <ion-input type="password" [(ngModel)]="upwd"></ion-input>
+     </ion-item>
+   </ion-card>
+   <!-- button 登录按钮 -->
+   <ion-button expand="block" (click)="doLogin()">登录</ion-button>
+
+   <!-- grid 其他登陆方式 -->
+   <ion-grid>
+     <ion-row size="2" class="ion-text-center">
+       <ion-col><ion-button color="light">QQ</ion-button></ion-col>
+       <ion-col><ion-button color="success">微信</ion-button> </ion-col>
+       <ion-col><ion-button color="danger">微博</ion-button></ion-col>
+     </ion-row>
+   </ion-grid>
+
+
+</ion-content>

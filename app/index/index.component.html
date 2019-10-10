@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+      <div class="flex">
+        <img src="../../assets/fy-logo.png" class="logo">
+        <ion-searchbar placeholder="商品搜索"></ion-searchbar>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- 轮播广告 -->
+  <ion-slides pager="true" #indexSlides>
+    <ion-slide *ngFor='let p of carouselItems'>
+      <img [src]=" api.server + p.img">
+    </ion-slide>
+  </ion-slides>
+
+  <!-- 1楼商品 -->
+  <ion-item>
+    <!-- 缩略图 -->
+    <!-- <ion-thumbnail slot="start"> </ion-thumbnail> -->  
+    <img src="../../assets/index/computer_icon.png" slot="end">
+    <ion-label>  
+      精品推荐
+    </ion-label>
+  </ion-item>
+  <!-- 栅格布局 -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let p of newArrivalItems">
+        <!-- 卡片 -->
+        <ion-card>
+          <img [src]="api.server + p.pic" class="product-pic">
+          <!-- 卡片头 -->
+          <ion-card-header>
+            <!-- 主标题 -->
+            <ion-card-title>
+              <h5 class="product-title">{{p.title}}</h5>
+            </ion-card-title>
+            <!-- 副标题 -->
+            <ion-card-subtitle>
+              <h6 class="product-subtitle">{{p.details}}</h6>
+            </ion-card-subtitle>
+          </ion-card-header>
+          <!-- 卡片内容 -->
+          <ion-card-content>
+            <div class="flex-b">
+              <ion-label color="primary" slot="end">价格：{{p.price}}￥</ion-label>
+              <ion-button [routerLink]='product-list' size="small">查看详情</ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- 精品图标 -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <div class="ion-text-center">
+          <img src="../../assets/index/icon1.png" class="icon-img">
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="ion-text-center">
+          <img src="../../assets/index/icon2.png" class="icon-img">
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="ion-text-center">
+          <img src="../../assets/index/icon3.png" class="icon-img">
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="ion-text-center">
+          <img src="../../assets/index/icon4.png" class="icon-img">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

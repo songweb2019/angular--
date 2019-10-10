@@ -1,0 +1,32 @@
+.flex{
+  display: flex;    
+  align-items: center;
+}
+.flex-b{
+  display: flex;    
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  width:8rem;
+  height:2.625rem;
+}
+.product-pic{
+  width:10rem;
+  height:6.5rem;
+  margin:auto;
+}
+.product-title{
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;;
+}
+.product-subtitle{
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+}
+
+.icon-img{
+  width:2.5rem;
+}
